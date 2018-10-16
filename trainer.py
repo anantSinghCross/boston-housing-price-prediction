@@ -20,7 +20,7 @@ print(dataset.shape)
 print(X.shape)
 print(Y.shape)
 
-'''     Now we will define three different Keras Models that will be different 
+'''     We can define different Keras Models that will be different 
         with respect to 'number of hidden layers', 'number of epochs' and
         'nuerons in the initial layer'.
 '''
@@ -37,7 +37,7 @@ def baseline_model():
 seed = 7
 np.random.seed(seed)
 # evaluate model with standardised dataset
-estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 5 , verbose = 1)
+estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 1 , verbose = 1)
 
 # evaluating model using the kfold method
 kfold = KFold(n_splits=10, random_state=seed)

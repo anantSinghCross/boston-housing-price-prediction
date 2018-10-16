@@ -37,16 +37,18 @@ def baseline_model():
 seed = 7
 np.random.seed(seed)
 # evaluate model with standardised dataset
-estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 5 , verbose = 1)
+estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 1 , verbose = 1)
 
 # evaluating model using the kfold method
-#kfold = KFold(n_splits=10, random_state=seed)
-#results = cross_val_score(estimator, X, Y, cv=kfold)
-#print("Results: %.4f (%.4f) MSE" % (results.mean(), results.std()))
+kfold = KFold(n_splits=10, random_state=seed)
+results = cross_val_score(estimator, X, Y, cv=kfold)
+print("Results: %.4f (%.4f) MSE" % (results.mean(), results.std()))
 
 print("FITTING THE MODEL NOW")
 # fitting the model
 estimator.fit(X,Y,batch_size = 5 , epochs = 100)
+
 # pickling the model
 pickle.dump(estimator,open("model.pkl","wb"))
 print("MODEL HAS BEEN PICKLED SUCCESSFULLY")
+# loaded model will only take in 2D array values

@@ -37,7 +37,7 @@ def baseline_model():
 seed = 7
 np.random.seed(seed)
 # evaluate model with standardised dataset
-estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 1 , verbose = 1)
+estimator = KerasRegressor(build_fn = baseline_model , epochs = 100 , batch_size = 5 , verbose = 1)
 
 # evaluating model using the kfold method
 kfold = KFold(n_splits=10, random_state=seed)

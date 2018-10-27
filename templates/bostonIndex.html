@@ -1,0 +1,116 @@
+<!--
+author: anantSinghCross (Anant Singh)
+-->
+
+<html>
+  <head>
+    <style>
+      body{
+        background-color: #404040;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      div.form{
+        box-shadow: 2px 2px 30px #1a1a1a;
+        width: 45vw;
+        background-color: #bfbfbf;
+        text-align: center;
+        border-left-color: #a6a6a6;
+      }
+      table{
+        font-size: 10px;
+        box-shadow: 2px 2px 30px #1a1a1a;
+        padding: 15px;
+        background-color: #bfbfbf;
+        width: 420px;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-color: #ffff00;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+      }
+      form{
+        border-left-style: solid;
+        border-color: #ffff00;
+        border-left-width: 5px;
+        padding: 15px;
+      }
+      h1{
+        color: #f2f2f2;
+        text-align: center;
+      }
+      input[type=text]{
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]{
+        background-color: #ffff00;
+        width: 90px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]:hover{
+        box-shadow: 2px 4px 20px #666666;
+      }
+      span{
+        color: #ffffff;
+      }
+      td{
+        color: #595959;
+      }
+      td.heading{
+        width: 50px;
+      }
+    </style>
+    <title>Boston Housing Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Boston Housing Predictor</h1>
+    <center>
+    <div class="form">
+    <form action="/predict" method="post">
+      Enter values to predict value of owner occupied homes<br><br>
+      <input type="text" name="crim" placeholder="CRIM" autofocus required><br><br>
+      <input type="text" name="zn" placeholder="ZN" required><br><br>
+      <input type="text" name="indus" placeholder="INDUS" required><br><br>
+      <input type="text" name="chas" placeholder="CHAS" required><br><br>
+      <input type="text" name="nox" placeholder="NOX" required><br><br>
+      <input type="text" name="rm" placeholder="RM" required><br><br>
+      <input type="text" name="age" placeholder="AGE" required><br><br>
+      <input type="text" name="dis" placeholder="DIS" required><br><br>
+      <input type="text" name="rad" placeholder="RAD" required><br><br>
+      <input type="text" name="tax" placeholder="TAX" required><br><br>
+      <input type="text" name="ptratio" placeholder="PT RATIO" required><br><br>
+      <input type="text" name="b" placeholder="B" required><br><br>
+      <input type="text" name="lstat" placeholder="L STAT" required><br><br>
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+</center>
+<br>
+<br>
+<div class = "legend">
+  <table>
+<tr><td class = "heading">CRIM :</td><td>per capita crime rate by town</td></tr><br>
+<tr><td class = "heading">ZN :</td><td>proportion of residential land zoned for lots over 25,000 sq.ft.</td></tr><br>
+<tr><td class = "heading">INDUS :</td><td>proportion of non-retail business acres per town</td></tr><br>
+<tr><td class = "heading">CHAS :</td><td>Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</td></tr><br>
+<tr><td class = "heading">NOX :</td><td>nitric oxides concentration (parts per 10 million)</td></tr><br>
+<tr><td class = "heading">RM :</td><td>average number of rooms per dwelling</td></tr><br>
+<tr><td class = "heading">AGE :</td><td>proportion of owner-occupied units built prior to 1940</td></tr><br>
+<tr><td class = "heading">DIS :</td><td>weighted distances to five Boston employment centres</td></tr><br>
+<tr><td class = "heading">RAD :</td><td>index of accessibility to radial highways</td></tr><br>
+<tr><td class = "heading">TAX :</td><td>full-value property-tax rate per $10,000</td></tr><br>
+<tr><td class = "heading">PTRATIO :</td><td>pupil-teacher ratio by town</td></tr><br>
+<tr><td class = "heading">B :</td><td>1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</td></tr><br>
+<tr><td class = "heading">LSTAT :</td><td>%age lower status of the population</td></tr><br>
+</table>
+</div>
+</body>
+</html>

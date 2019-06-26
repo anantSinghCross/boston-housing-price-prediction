@@ -12,6 +12,15 @@ You can use the Boston dataset that I have provided in the repository or you can
 * Training the model on the dataset
 * Saving the model to use it whenever required without the need to retrain it
 
+#### What you see in the repo
+
+* *api.py*- The backend Flask app
+* *boston.csv*- Dataset
+* *model.h5*- Trained model weights
+* *model.json*- Trained model structure in JSON format
+* *trainer.py*- The main program you'll be most interested in
+
+
 #### Check your Libraries
 
 You should have your libraries updated. You will need the following libraries:

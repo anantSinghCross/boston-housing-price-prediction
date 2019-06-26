@@ -16,10 +16,9 @@ You can use the Boston dataset that I have provided in the repository or you can
 
 * *api.py*- The backend Flask app
 * *boston.csv*- Dataset
-* *model.h5*- Trained model weights
-* *model.json*- Trained model structure in JSON format
+* *model.h5*- Trained model weights (created by *trainer.py* program)
+* *model.json*- Trained model structure in JSON format (created by *trainer.py* program) (I want you to see this file as it really gives a lot of usefull information about the structure and different layers being used.)
 * *trainer.py*- The main program you'll be most interested in
-
 
 #### Check your Libraries
 
@@ -54,6 +53,6 @@ To run the *api.py* head to the command prompt, change the directory and type `p
 ### Brief of what's happening
 
 * The *index.html* takes in values which are sent to the *api.py* running in the background which does all the prediction.
-* *api.py* loads the saved model and sends back the prediction in the Jinja variable.
+* *api.py* loads the saved model and sends back the prediction in the Jinja variable (present in the HTML file).
 
 ***

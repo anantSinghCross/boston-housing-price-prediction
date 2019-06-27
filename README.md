@@ -56,3 +56,7 @@ To run the *api.py* head to the command prompt, change the directory and type `p
 * *api.py* loads the saved model and sends back the prediction in the Jinja variable (present in the HTML file).
 
 ***
+
+#### Note
+
+For those who're having any doubts about any aspect of this project, it's literally all over the internet you just need to google it. Since it was one of my first machine learning projects I had a really hard time gathering info about deploying the model. So I thought why not just clump all this info at one place and help some growing minds!
